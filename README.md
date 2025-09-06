@@ -406,6 +406,20 @@ Enhance GNOME with these extensions:
 - **Desktop Icons NG (DING)** → desktop icon support
     
 - **GSConnect** → Android device integration
+  - if you are unable to locate your device do this
+
+    ```bash
+    sudo pacman -S ufw
+    ```
+
+    ```bash
+    sudo ufw enable
+    ```
+
+    ```bash
+    sudo ufw allow 1714:1764/udp
+    sudo ufw allow 1714:1764/tcp
+    ```
     
 - **Vitals** → system resource monitoring in top bar
     
