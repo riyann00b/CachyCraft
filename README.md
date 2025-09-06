@@ -15,6 +15,8 @@ It includes essential apps, developer tools, system configurations, and maintena
 
 ✨ Whether you’re a developer, a power user, or just exploring CachyOS, this guide will help you craft the perfect workflow.  
 
+![CheatSheet](https://github.com/riyann00b/CachyCraft/blob/main/fisherman-toolkit.md)
+
 ---
 
 ## 📑 Table of Contents
@@ -492,7 +494,7 @@ Here are the most useful ones (no need to add manually unless you want to extend
     
 - **Package Management** → `cleanup` removes orphans, `big` shows largest packages, `gitpkg` counts `-git` packages.
     
-
+Full list of alies ![Here](https://github.com/riyann00b/CachyCraft/blob/main/fisherman-toolkit.md)
 
 ---
 
