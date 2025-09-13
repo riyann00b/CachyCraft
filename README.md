@@ -259,7 +259,6 @@ docker version
 
 ---
 
-Want me to also include **how to install Obsidian (via Flatpak)** right under this section, so both developer tools are grouped together?
 ### 🐳 Docker Cleanup
 ```bash
 # Clean up unused Docker objects
@@ -274,6 +273,55 @@ docker network prune -f
 # Remove dangling images
 docker image prune -f
 ```
+---
+
+### 🗃️ Database — MariaDB
+
+For robust, high-performance database management, MariaDB is the default choice for Arch Linux and CachyOS. It serves as a powerful, open-source, and community-driven replacement for MySQL.
+
+#### Why MariaDB over MySQL?
+
+MariaDB originated as a fork of MySQL, created by its original developers to ensure it remained free and open-source. Here’s why it’s often preferred:
+
+-   **Truly Open-Source**: MariaDB is fully GPL licensed and driven by its community and the MariaDB Foundation, whereas MySQL's open-source Community Edition is managed by Oracle, with many advanced features reserved for the Enterprise version.
+-   **Better Performance**: MariaDB often demonstrates superior performance thanks to its enhanced query optimizer and additional storage engines like Aria and ColumnStore, which are designed for speed and analytics.
+-   **More Features**: It includes modern features like system-versioned tables, Oracle compatibility syntax, and invisible columns that aren't available in MySQL Community Edition.
+-   **Drop-in Replacement**: For most use cases, you can switch from MySQL to MariaDB without any code changes. It maintains backward compatibility and uses the same client protocols, ports, and tools.
+
+#### 📦 Installation on CachyOS
+
+1.  **Install the MariaDB package:**  
+    MariaDB is the default implementation on Arch-based systems.
+
+    ```bash
+    sudo pacman -S mariadb
+    ```
+
+2.  **Initialize the data directory:**  
+    This command sets up the necessary system tables and database structure.
+
+    ```bash
+    sudo mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
+    ```
+
+3.  **Start and enable the MariaDB service:**  
+    This ensures the database server runs automatically on boot.
+
+    ```bash
+    sudo systemctl start mariadb
+    sudo systemctl enable mariadb
+    ```
+
+4.  **Secure your installation (Highly Recommended):**  
+    Run the security script to set a root password, remove anonymous users, disallow remote root login, and clean up the test database.
+
+    ```bash
+    sudo mariadb-secure-installation
+    ```
+
+    Follow the on-screen prompts to secure your new database server. You're now ready to create databases and users!
+
+---
 
 ### 💾 Btrfs & Snapshots
 
