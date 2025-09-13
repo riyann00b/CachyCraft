@@ -321,6 +321,8 @@ MariaDB originated as a fork of MySQL, created by its original developers to ens
 
     Follow the on-screen prompts to secure your new database server. You're now ready to create databases and users!
 
+[User Guide and cheatsheet](https://github.com/riyann00b/CachyCraft/blob/main/MariaDB%20Crafter's%20Guide.md)
+
 ---
 
 ### 💾 Btrfs & Snapshots
